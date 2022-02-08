@@ -36,11 +36,11 @@ int main(int argc, char *argv[])
         if(existedUserControl != 0) // if user doesn't exist yet, create user:
         {
             //---------------------------
-            printf("User does not exist, create user: \n");
-            printf("Enter your password: \n");
+            printf("User does not exist, create user '%s'.\n", user);
+            printf("Enter a password: \n");
             scanf("%s", &password1);
 
-            printf("Enter your password again: \n");
+            printf("Enter a password again: \n");
             scanf("%s", &password2);
 
             // PROCESSING
@@ -49,11 +49,11 @@ int main(int argc, char *argv[])
             if(samePasswordControl==0)
             {
                 //printf("%s", "Le password sono uguali.\n");
-                printf("%s", "Registered User.\n");
+                printf("%s", "Registered User!\n");
                 strcpy(createdUser, user);
                 strcpy(createdPassword, password1);
 
-                printf("%s", "Login created user:\n");
+                printf("%s", "Login your created user.\n");
                 printf("User: \n");
                 scanf("%s", &user);
                 printf("Password: \n");
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 
                 if(createdUserControl == 0 && createdPasswordControl == 0)
                 {
-                    printf("%s", "Connected.\n");
+                    printf("%s", "Connected!\n");
                     break;
                 }
                 else
@@ -87,7 +87,7 @@ int main(int argc, char *argv[])
             existedPasswordControl=strcmp(password1, existedPassword);
             if(existedPasswordControl==0)
             {
-                printf("%s", "Connected.\n");
+                printf("%s", "Connected!\n");
                 break;
             }
             else
